@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Visitor Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">+</div>
+      <div><strong>CarePoint</strong><span>Visitor Management</span></div>
+    </div>
+    <p class="nav-label">MAIN MENU</p>
+    <nav>
+      <a class="nav-link active" href="#overview"><span>▦</span> Dashboard</a>
+      <a class="nav-link" href="#registration"><span>＋</span> Register Visitor</a>
+      <a class="nav-link" href="#visitors"><span>♙</span> Active Visitors</a>
+      <a class="nav-link" href="#pass"><span>▤</span> Visitor Pass</a>
+      <a class="nav-link" href="#exit-record"><span>↗</span> Exit Records</a>
+    </nav>
+    <div class="sidebar-note">
+      <div class="note-icon">♥</div>
+      <strong>Safe visits, better care.</strong>
+      <p>Helping hospital teams keep visitor information organised.</p>
+    </div>
+    <div class="sidebar-footer">HTML + CSS student project</div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">HOSPITAL ADMINISTRATION</p>
+        <h1>Visitor Management</h1>
+        <p class="subheading">Register, review and organise hospital visits.</p>
+      </div>
+      <div class="admin-chip"><div class="avatar">A</div><div><strong>Admin Desk</strong><span>Reception</span></div></div>
+    </header>
+
+    <section id="overview" class="welcome-panel">
+      <div>
+        <p class="eyebrow light">VISITOR CONTROL CENTRE</p>
+        <h2>A smoother welcome.<br>A safer hospital.</h2>
+        <p>Keep visitor details and visit records together in one clear workspace.</p>
+        <a class="primary-button" href="#registration">＋ Register a visitor</a>
+      </div>
+      <div class="welcome-art" aria-hidden="true">
+        <div class="art-circle circle-one"></div><div class="art-circle circle-two"></div>
+        <div class="hospital-icon"><span>+</span><div class="hospital-windows">▦ ▦<br>▦ ▦</div></div>
+        <div class="art-caption">CARE • SAFETY • TRUST</div>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Visitor summary">
+      <article class="stat-card"><div class="stat-top"><span class="stat-icon blue">♙</span><span class="stat-tag">TODAY</span></div><p class="stat-label">Total registrations</p><div class="stat-value">24</div><p class="stat-foot">Visitors registered today</p></article>
+      <article class="stat-card"><div class="stat-top"><span class="stat-icon green">●</span><span class="stat-tag">ON SITE</span></div><p class="stat-label">Active visitors</p><div class="stat-value">08</div><p class="stat-foot">Currently inside the hospital</p></article>
+      <article class="stat-card"><div class="stat-top"><span class="stat-icon purple">▤</span><span class="stat-tag">ISSUED</span></div><p class="stat-label">Visitor passes</p><div class="stat-value">24</div><p class="stat-foot">Passes shown for today's demo</p></article>
+      <article class="stat-card"><div class="stat-top"><span class="stat-icon orange">↗</span><span class="stat-tag">COMPLETED</span></div><p class="stat-label">Exit records</p><div class="stat-value">16</div><p class="stat-foot">Visits marked as completed</p></article>
+    </section>
+
+    <div class="content-grid">
+      <section id="registration" class="panel">
+        <div class="section-heading"><div><p class="eyebrow">NEW ENTRY</p><h2>Visitor registration</h2></div><span class="step-badge">STEP 01</span></div>
+        <p class="panel-description">Enter the visitor and patient details below.</p>
+        <form action="#" method="get">
+          <div class="form-grid">
+            <div class="field full"><label for="visitor-name">Visitor full name</label><input id="visitor-name" type="text" placeholder="e.g. Rahul Sharma" required></div>
+            <div class="field"><label for="phone">Contact number</label><input id="phone" type="tel" placeholder="10-digit mobile number"></div>
+            <div class="field"><label for="relationship">Relationship to patient</label><select id="relationship"><option>Select relationship</option><option>Family member</option><option>Friend</option><option>Caregiver</option><option>Other</option></select></div>
+            <div class="field"><label for="patient-name">Patient name</label><input id="patient-name" type="text" placeholder="Enter patient name" required></div>
+            <div class="field"><label for="room">Ward / room number</label><input id="room" type="text" placeholder="e.g. Ward B-204"></div>
+            <div class="field"><label for="visit-date">Visiting date</label><input id="visit-date" type="date"></div>
+            <div class="field"><label for="visit-time">Visiting time</label><input id="visit-time" type="time"></div>
+            <div class="field full"><label for="purpose">Purpose of visit</label><textarea id="purpose" rows="3" placeholder="Briefly describe the purpose of the visit"></textarea></div>
+          </div>
+          <div class="form-actions"><button class="primary-button" type="submit">Register visitor <span>→</span></button><button class="secondary-button" type="reset">Clear form</button></div>
+          <p class="demo-note">Demo interface: this form does not save records because the project uses HTML and CSS only.</p>
+        </form>
+      </section>
+
+      <div class="right-column">
+        <section id="pass" class="panel pass-panel">
+          <div class="section-heading"><div><p class="eyebrow">IDENTIFICATION</p><h2>Visitor pass preview</h2></div><span class="pass-status">SAMPLE</span></div>
+          <div class="visitor-pass">
+            <div class="pass-head"><div class="mini-logo">+</div><div><strong>CAREPOINT HOSPITAL</strong><span>VISITOR IDENTIFICATION</span></div><div class="pass-bars">▥</div></div>
+            <div class="pass-body"><div class="pass-avatar">RS</div><div><p class="pass-name">Rahul Sharma</p><p class="pass-role">Family visitor</p><p class="pass-detail">Patient: Anil Sharma</p><p class="pass-detail">Room: B-204</p></div></div>
+            <div class="pass-footer"><div><span>PASS NUMBER</span><strong>CP-0248</strong></div><div class="valid-pill">● Sample pass</div></div>
+          </div>
+          <p class="demo-note">Illustrative pass only. It is not a real access credential.</p>
+        </section>
+
+        <section id="exit-record" class="panel exit-panel">
+          <div class="section-heading"><div><p class="eyebrow">VISIT COMPLETION</p><h2>Record visitor exit</h2></div><span class="step-badge">STEP 02</span></div>
+          <p class="panel-description">Use this sample form to demonstrate how an exit could be recorded.</p>
+          <form action="#" method="get">
+            <div class="field"><label for="pass-number">Visitor pass number</label><input id="pass-number" type="text" placeholder="e.g. CP-0248"></div>
+            <div class="field"><label for="exit-time">Exit time</label><input id="exit-time" type="time"></div>
+            <button class="secondary-button full-button" type="submit">Mark exit (demo) ↗</button>
+          </form>
+          <p class="demo-note">This button does not update the active visitor list.</p>
+        </section>
+      </div>
+    </div>
+
+    <section id="visitors" class="panel visitors-panel">
+      <div class="section-heading table-heading"><div><p class="eyebrow">LIVE OVERVIEW</p><h2>Active visitors</h2><p class="panel-description">Example entries for presentation purposes.</p></div><form class="search-form" action="#visitors" method="get"><label class="visually-hidden" for="search">Search visitors</label><input id="search" type="search" placeholder="Search visitors..."><button type="submit" aria-label="Submit search">⌕</button></form></div>
+      <div class="table-wrap"><table><thead><tr><th>VISITOR</th><th>PATIENT</th><th>ROOM</th><th>CHECK-IN</th><th>STATUS</th><th>EXIT ACTION</th></tr></thead><tbody>
+        <tr><td><div class="person-cell"><div class="person-avatar blue">RS</div><div><strong>Rahul Sharma</strong><span>Family member</span></div></div></td><td>Anil Sharma</td><td>B-204</td><td>10:15 AM</td><td><span class="status active-status">● Active</span></td><td><span class="action-label">CP-0248</span></td></tr>
+        <tr><td><div class="person-cell"><div class="person-avatar purple">PM</div><div><strong>Priya Mehta</strong><span>Friend</span></div></div></td><td>Kavita Mehta</td><td>A-112</td><td>10:32 AM</td><td><span class="status active-status">● Active</span></td><td><span class="action-label">CP-0249</span></td></tr>
+        <tr><td><div class="person-cell"><div class="person-avatar orange">AK</div><div><strong>Arjun Kumar</strong><span>Caregiver</span></div></div></td><td>Sunita Kumar</td><td>C-018</td><td>11:05 AM</td><td><span class="status active-status">● Active</span></td><td><span class="action-label">CP-0250</span></td></tr>
+        <tr><td><div class="person-cell"><div class="person-avatar green">SG</div><div><strong>Simran Gill</strong><span>Family member</span></div></div></td><td>Harpreet Gill</td><td>B-109</td><td>09:40 AM</td><td><span class="status exited-status">● Exited</span></td><td><span class="action-label">Recorded</span></td></tr>
+      </tbody></table></div>
+      <div class="table-footer"><span>Showing 4 sample records</span><span>HTML + CSS demonstration</span></div>
+    </section>
+    <footer class="page-footer"><span>CarePoint Visitor Management System</span><span>Academic project • Interface prototype</span></footer>
+  </main>
+</body>
+</html>
